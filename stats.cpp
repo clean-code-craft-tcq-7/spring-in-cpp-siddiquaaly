@@ -1,6 +1,6 @@
 #include "stats.h"
 
-Stats Statistics::ComputeStatistics(const std::vector<double>& numbers) {
+Statistics::Stats Statistics::ComputeStatistics(const std::vector<double>& numbers) {
     Stats result{};
 
     if (numbers.empty()) {
