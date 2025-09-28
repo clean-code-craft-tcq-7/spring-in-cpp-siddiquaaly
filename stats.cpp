@@ -1,6 +1,7 @@
 #include "stats.h"
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<double>& numbers) {
+    int i;
     Stats result{};
 
     if (numbers.empty()) {
@@ -12,7 +13,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<double>& numbe
     double minVal = numbers[0];
     double maxVal = numbers[0];
 
-    for (size_t i = 0; i < numbers.size(); i++) {
+    for (std::size_t i = 0; i < numbers.size(); i++) {
         double value = numbers[i];
         sum += value;
 
