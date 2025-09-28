@@ -1,13 +1,17 @@
 #include "stats.h"
+#include "math.h"
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<double>& numbers) {
     int i;
     Stats result{};
 
     if (numbers.empty()) {
-        result.average = result.min = result.max = 0.0f;
+        result.average = NAN;
+        result.min     = NAN;
+        result.max     = NAN;
         return result;
     }
+
 
     double sum = 0.0;
     double minVal = numbers[0];
